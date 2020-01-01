@@ -1,0 +1,56 @@
+{
+  "name": "proto2graphql",
+  "version": "0.1.0-alpha",
+  "description": "Converts schema definitions in Protocol Buffer to GraphQL",
+  "main": "./lib/index.js",
+  "bin": {
+    "proto2graphql": "./bin/proto2graphql"
+  },
+  "files": [
+    "protos",
+    "lib",
+    "bin"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./lib ./protos",
+    "build": "tsc -p .",
+    "test": "mocha -r ts-node/register **/test/*.spec.ts",
+    "pull:wkt": "scripts/pull-wkt.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emzeq/proto2graphql.git"
+  },
+  "keywords": [
+    "proto",
+    "protobuf",
+    "pb",
+    "graphql",
+    "sdl",
+    "protocol",
+    "buffers",
+    "schema"
+  ],
+  "author": "Aurelio Agundez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emzeq/proto2graphql/issues"
+  },
+  "homepage": "https://github.com/emzeq/proto2graphql#readme",
+  "dependencies": {
+    "commander": "^4.0.1",
+    "graphql": "^14.5.8",
+    "protobufjs": "^6.8.8"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/commander": "^2.12.2",
+    "@types/graphql": "^14.5.0",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "nyc": "^15.0.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  }
+}

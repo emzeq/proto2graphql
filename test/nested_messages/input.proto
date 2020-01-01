@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message TypeA {
+  message TypeB {
+    int32 fieldB = 1;
+  }
+  TypeB fieldA = 1;
+}
+
+message TypeC {
+  TypeA fieldC = 1;
+}

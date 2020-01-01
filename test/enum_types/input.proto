@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message User {
+  UserType type = 1;
+}
+
+enum UserType {
+  UNKOWN = 0;
+  NORMAL = 1;
+  ADMIN = 2;
+}

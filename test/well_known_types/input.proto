@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+import "google/protobuf/api.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/field_mask.proto";
+import "google/protobuf/source_context.proto";
+import "google/protobuf/struct.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/type.proto";
+import "google/protobuf/wrappers.proto";
+
+message WellKnownTypes {
+  google.protobuf.Any any_field = 1;
+  google.protobuf.Api api_field = 2;
+  google.protobuf.Duration duration_field = 3;
+  google.protobuf.Empty empty_field = 4;
+  google.protobuf.FieldMask field_mask_field = 5;
+  google.protobuf.SourceContext source_context_field = 6;
+  google.protobuf.Struct struct_field = 7;
+  google.protobuf.Timestamp timestamp_field = 8;
+  google.protobuf.Type type_field = 9;
+  google.protobuf.DoubleValue double_field = 10;
+  google.protobuf.FloatValue float_field = 11;
+  google.protobuf.Int64Value int64_field = 12;
+  google.protobuf.UInt64Value uint64_field = 13;
+  google.protobuf.Int32Value int32_field = 14;
+  google.protobuf.UInt32Value uint32_field = 15;
+  google.protobuf.BoolValue bool_field = 16;
+  google.protobuf.StringValue string_field = 17;
+  google.protobuf.BytesValue bytes_field = 18;
+  google.protobuf.Value value_field = 19;
+}

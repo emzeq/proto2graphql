@@ -1,0 +1,12 @@
+type DirectType {
+  fieldA: ImportTypeA
+  fieldB: ImportTypeB
+}
+
+type ImportTypeA {
+  fieldA: String
+}
+
+type ImportTypeB {
+  fieldA: String
+}

@@ -1,0 +1,173 @@
+type WellKnownTypes {
+  anyField: google_protobuf_Any
+  apiField: google_protobuf_Api
+  durationField: google_protobuf_Duration
+  emptyField: google_protobuf_Empty
+  fieldMaskField: google_protobuf_FieldMask
+  sourceContextField: google_protobuf_SourceContext
+  structField: google_protobuf_Struct
+  timestampField: google_protobuf_Timestamp
+  typeField: google_protobuf_Type
+  doubleField: google_protobuf_DoubleValue
+  floatField: google_protobuf_FloatValue
+  int64Field: google_protobuf_Int64Value
+  uint64Field: google_protobuf_UInt64Value
+  int32Field: google_protobuf_Int32Value
+  uint32Field: google_protobuf_UInt32Value
+  boolField: google_protobuf_BoolValue
+  stringField: google_protobuf_StringValue
+  bytesField: google_protobuf_BytesValue
+  valueField: google_protobuf_Value
+}
+type google_protobuf_Any {
+  type_url: String
+  value: String
+}
+type google_protobuf_Api {
+  name: String
+  methods: [google_protobuf_Method]
+  options: [google_protobuf_Option]
+  version: String
+  sourceContext: google_protobuf_SourceContext
+  mixins: [google_protobuf_Mixin]
+  syntax: google_protobuf_Syntax
+}
+type google_protobuf_Method {
+  name: String
+  requestTypeUrl: String
+  requestStreaming: Boolean
+  responseTypeUrl: String
+  responseStreaming: Boolean
+  options: [google_protobuf_Option]
+  syntax: google_protobuf_Syntax
+}
+type google_protobuf_Mixin {
+  name: String
+  root: String
+}
+type google_protobuf_SourceContext {
+  fileName: String
+}
+type google_protobuf_Type {
+  name: String
+  fields: [google_protobuf_Field]
+  oneofs: [String]
+  options: [google_protobuf_Option]
+  sourceContext: google_protobuf_SourceContext
+  syntax: google_protobuf_Syntax
+}
+type google_protobuf_Field {
+  kind: google_protobuf_Field_Kind
+  cardinality: google_protobuf_Field_Cardinality
+  number: Int
+  name: String
+  typeUrl: String
+  oneofIndex: Int
+  packed: Boolean
+  options: [google_protobuf_Option]
+  jsonName: String
+  defaultValue: String
+}
+enum google_protobuf_Field_Kind {
+  TYPE_UNKNOWN
+  TYPE_DOUBLE
+  TYPE_FLOAT
+  TYPE_INT64
+  TYPE_UINT64
+  TYPE_INT32
+  TYPE_FIXED64
+  TYPE_FIXED32
+  TYPE_BOOL
+  TYPE_STRING
+  TYPE_GROUP
+  TYPE_MESSAGE
+  TYPE_BYTES
+  TYPE_UINT32
+  TYPE_ENUM
+  TYPE_SFIXED32
+  TYPE_SFIXED64
+  TYPE_SINT32
+  TYPE_SINT64
+}
+enum google_protobuf_Field_Cardinality {
+  CARDINALITY_UNKNOWN
+  CARDINALITY_OPTIONAL
+  CARDINALITY_REQUIRED
+  CARDINALITY_REPEATED
+}
+type google_protobuf_Enum {
+  name: String
+  enumvalue: [google_protobuf_EnumValue]
+  options: [google_protobuf_Option]
+  sourceContext: google_protobuf_SourceContext
+  syntax: google_protobuf_Syntax
+}
+type google_protobuf_EnumValue {
+  name: String
+  number: Int
+  options: [google_protobuf_Option]
+}
+type google_protobuf_Option {
+  name: String
+  value: google_protobuf_Any
+}
+enum google_protobuf_Syntax {
+  SYNTAX_PROTO2
+  SYNTAX_PROTO3
+}
+type google_protobuf_Duration {
+  seconds: Int
+  nanos: Int
+}
+type google_protobuf_Empty
+type google_protobuf_FieldMask {
+  paths: [String]
+}
+type google_protobuf_Struct {
+  fields: [String_google_protobuf_Value_Map]
+}
+type String_google_protobuf_Value_Map {
+  key: String
+  value: google_protobuf_Value
+}
+type google_protobuf_Value {
+  kind: google_protobuf_Value_kind
+}
+union google_protobuf_Value_kind = google_protobuf_NullValue | Float | String | Boolean | google_protobuf_Struct | google_protobuf_ListValue
+enum google_protobuf_NullValue {
+  NULL_VALUE
+}
+type google_protobuf_ListValue {
+  values: [google_protobuf_Value]
+}
+type google_protobuf_Timestamp {
+  seconds: Int
+  nanos: Int
+}
+type google_protobuf_DoubleValue {
+  value: Float
+}
+type google_protobuf_FloatValue {
+  value: Float
+}
+type google_protobuf_Int64Value {
+  value: Int
+}
+type google_protobuf_UInt64Value {
+  value: Int
+}
+type google_protobuf_Int32Value {
+  value: Int
+}
+type google_protobuf_UInt32Value {
+  value: Int
+}
+type google_protobuf_BoolValue {
+  value: Boolean
+}
+type google_protobuf_StringValue {
+  value: String
+}
+type google_protobuf_BytesValue {
+  value: String
+}

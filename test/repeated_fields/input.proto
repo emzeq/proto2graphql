@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+message TypeA {
+  int32 field = 1;
+}
+
+message TypeB {
+  repeated TypeA field = 1;
+}

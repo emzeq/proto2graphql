@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message UserAuth {
+  message GoogleProvider {
+    int32 gid = 1;
+  }
+
+  message FacebookProvider {
+    string fbid = 1;
+  }
+
+  oneof provider {
+    GoogleProvider google = 1;
+    FacebookProvider facebook = 2;
+    string generic = 3;
+  }
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+message ScalarTypes {
+    string field_a = 1;
+    double field_b = 2;
+    float field_c = 3;
+    int32 field_d = 4;
+    int64 field_e = 5;
+    uint32 field_f = 6;
+    uint64 field_g = 7;
+    sint32 field_h = 8;
+    sint64 field_i = 9;
+    fixed32 field_j = 10;
+    fixed64 field_k = 11;
+    sfixed32 field_l = 12;
+    sfixed64 field_m = 13;
+    bool field_n = 14;
+    string field_o = 15;
+}

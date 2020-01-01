@@ -1,0 +1,9 @@
+type User {
+  type: UserType
+}
+
+enum UserType {
+  UNKOWN
+  NORMAL
+  ADMIN
+}

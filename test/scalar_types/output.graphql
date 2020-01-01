@@ -1,0 +1,17 @@
+type ScalarTypes {
+  fieldA: String
+  fieldB: Float
+  fieldC: Float
+  fieldD: Int
+  fieldE: Int
+  fieldF: Int
+  fieldG: Int
+  fieldH: Int
+  fieldI: Int
+  fieldJ: Int
+  fieldK: Int
+  fieldL: Int
+  fieldM: Int
+  fieldN: Boolean
+  fieldO: String
+}

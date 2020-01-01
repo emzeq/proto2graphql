@@ -1,0 +1,3 @@
+type protobuftographql_test_TypeA {
+  field: Int
+}
