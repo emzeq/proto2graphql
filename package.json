@@ -14,7 +14,8 @@
   "scripts": {
     "clean": "rm -rf ./lib ./protos",
     "build": "tsc -p .",
-    "test": "mocha -r ts-node/register **/test/*.spec.ts",
+    "test": "nyc mocha -r ts-node/register **/test/*.spec.ts",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "pull:wkt": "scripts/pull-wkt.sh"
   },
   "repository": {

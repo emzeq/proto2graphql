@@ -1,6 +1,4 @@
-version: 2.1
-orbs:
-  coveralls: coveralls/coveralls@1.0.4
+version: 2
 jobs:
   build:
     docker:
@@ -10,5 +8,5 @@ jobs:
       - run: yarn
       - run: yarn pull:wkt
       - run: yarn build
-      - run: npx nyc yarn test
-      - coveralls/upload
+      - run: yarn test
+      - run: npx nyc report --reporter=text-lcov | npx coveralls
