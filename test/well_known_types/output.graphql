@@ -124,9 +124,9 @@ type google_protobuf_FieldMask {
   paths: [String]
 }
 type google_protobuf_Struct {
-  fields: [String_google_protobuf_Value_Map]
+  fields: [String_google_protobuf_Value_map]
 }
-type String_google_protobuf_Value_Map {
+type String_google_protobuf_Value_map {
   key: String
   value: google_protobuf_Value
 }

@@ -172,10 +172,10 @@ message Attribute {
 
 ```graphql
 type User {
-  attributes: [String_Attribute_Map]
+  attributes: [String_Attribute_map]
 }
 
-type String_Attribute_Map {
+type String_Attribute_map {
   key: String
   value: Attribute
 }

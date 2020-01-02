@@ -30,7 +30,7 @@ export function fullTypeName(type: protobuf.ReflectionObject): string {
     const valueType = isScalar(type.type)
       ? convertScalar(type.type)
       : fullTypeName(type.resolvedType);
-    return `${keyType}_${valueType}_Map`;
+    return `${keyType}_${valueType}_map`;
   }
 
   return type.parent && type.parent.name
