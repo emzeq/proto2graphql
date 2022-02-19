@@ -11,7 +11,7 @@ describe("converter", () => {
     it(`handles ${test.replace(/_/g, " ")}`, () => {
       const testDir = join(DIR, test);
       const actual = convert(join(testDir, "input.proto"));
-      const expected = readFileSync(join(testDir, "output.graphql"), "UTF-8");
+      const expected = readFileSync(join(testDir, "output.graphql"), { encoding: "utf-8" });
       expect(normalize(actual)).equal(normalize(expected));
     });
   });
