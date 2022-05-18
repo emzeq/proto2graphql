@@ -1,9 +1,9 @@
-import { Root } from "protobufjs";
+import {IParseOptions, Root} from "protobufjs";
 import * as path from "path";
 import { visit } from "./visitor";
 import { printType } from "graphql";
 
-export function convert(filename: string) {
+export function convert(filename: string, options: IParseOptions) {
   const root = new Root();
   const protosDir = path.join(__dirname, "..", "protos");
   const defaultResolver = root.resolvePath;
@@ -16,7 +16,7 @@ export function convert(filename: string) {
     return defaultResolver(origin, target);
   };
 
-  root.loadSync(filename);
+  root.loadSync(filename, options);
   const types = visit(root.nestedArray);
   return types.map(type => printType(type)).join("\n");
 }
